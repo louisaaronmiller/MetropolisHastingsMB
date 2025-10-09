@@ -25,7 +25,20 @@ for i in v_vals:
 
 # ---------------------------- Metropolis Hastings ----------------------------
 
+def ratio(Wa,Wb,Pab_p,Pba_p):
+    Rab = (Wb/Wa) * (Pba_p/Pab_p)
+    Rba = 1/Rab
+    return Rab,Rba
 
+def accept(R):
+    '''
+        R stands for both a->b or b->a, but for now just incase this is for a->b
+    '''
+    if R >= 1:
+        Pab_a = 1
+    elif R < 1:
+        Pab_a = R
+    return Pab_a
 
 # ---------------------------- Plotting ----------------------------
 
