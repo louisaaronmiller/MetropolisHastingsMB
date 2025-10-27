@@ -1,5 +1,7 @@
 <img width="757" height="515" alt="blah" src="https://github.com/user-attachments/assets/4830557f-788f-4f00-b80a-fe4c0f1225dc" />
+
 ----
+
 # Todo
 1. implement a stable calculation for C, by reading on.
 
