@@ -427,7 +427,6 @@ print(approx)
 
 #TO DO
 
-# swap counts for accept in DiagMC and check the length of sample array
 # make sure im not dividing to make numbers easier in metroexpectation3
 # use metroexpec3 to calculate C - make a graph
 # use metroexpec3 to calculate <v> using the C that we calculate - make a graph
@@ -440,8 +439,8 @@ print(approx)
 #sample = Metro(aug_vp,temperature,mass,2)
 
 #run, step, C= Metro_expectation3(aug_vp, temperature, mass, 2,2e5, 10000000, False)
-plt.plot(np.linspace(1,1000,1000),typezeroarray[:1000],'k',label = 'Type Zero')
-plt.plot(np.linspace(1,1000,1000),typeonearray[:1000],'r',label = 'Type One')
+plt.plot(np.linspace(1,100,100),typezeroarray[:100],'k',label = 'Type Zero')
+plt.plot(np.linspace(1,100,100),typeonearray[:100],'r',label = 'Type One')
 #plt.plot(step, C)
 #plt.plot(step, [1] * len(step), "r--", label="Analytical")
 # plt.plot(step,run)
@@ -449,13 +448,15 @@ plt.plot(np.linspace(1,1000,1000),typeonearray[:1000],'r',label = 'Type One')
 #plt.plot(step,[aug_vp] * len(step),'r--', label = 'Analytical')
 #plt.hist(sample, bins=100, density=True, label='Markov Chain Monte Carlo Numerical')
 #plt.plot(v_vals,np.array(boltz), label = 'Analytical', color = 'r')
-plt.grid()
+plt.grid(True,linestyle = ':')
 #plt.title('Velocity Expectation: Maxwell Boltzmann Distribution (C=1)')
-plt.title('Maxwell Boltzmann Distribution: Type Zero and Type One Counts over Iterations')
+plt.title('Maxwell Boltzmann Distribution: Type Zero and Type One Counts over Steps')
+
+
 #plt.title("Velocity Expectation: Maxwell Boltzmann Distribution C calculation")
-plt.xlabel("Step")
+plt.xlabel("Steps")
 #plt.ylabel("$<v>$")
-plt.ylabel("$Type Count$")
+plt.ylabel("Type Count")
 #plt.legend()
 plt.minorticks_on()
-plt.show()
+plt.close()
